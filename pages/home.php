@@ -8,8 +8,9 @@
             <!-- sideleft -->
             <div style="position:fixed;" class="left  col-md-2 ">
                     <div class="d-flex"> 
-                        <p class="w-25" style="background:grey;border-radius: 40px;padding:25px;"> </p>
-                        <p class="fw-bold mt-3">Somnak Kalan</p>
+                        <!-- <p class="w-25" style="background:grey;border-radius: 40px;padding:25px;"> </p> -->
+                        <img src="../images/lisa.png" alt="30" class="rounded-circle" width="40%" height="90vh">
+                        <p class="fw-bold mt-3">Lalalisa</p>
                     </div>
                 <div class="d-flex mt-5"><i class="fa-solid fa-user-group m-2"></i><a href="" class="nav-link">Friends</a></div>
                 <div class="d-flex mt-5"><i class="fa-solid fa-clock m-2"></i><a href="" class="nav-link">Memories</a></div>
@@ -19,8 +20,8 @@
             <div class="w-50 m-auto  col-md-3">
                     <div style="background: rgb(192, 187, 187);" class="card-post rounded p-4 ">
                 <div class="logo d-flex">
-                    <p style="background:grey;border-radius: 40px;padding:25px;"></p>
-                    <p style="margin-left:40px;margin-top:5px;padding:1px;" class="bg-light form-control rounded-pill" ><a class="nav-link" href="">What is your mind,Somnak</a></p>
+                    <!-- <p style="background:grey;border-radius: 40px;padding:25px;"></p> -->
+                    <a><img src="../images/lisa.png" alt="30" class="rounded-circle" width="150%" height="70vh"></a><p style="margin-left:40px;margin-top:5px;padding:1px;" class="bg-light form-control rounded-pill" ><a class="nav-link" href="">What is your mind,Somnak</a></p>
                 </div>
                 <div style="border-top:5px solid white;padding:10px">
                     <ul class="nav  ">

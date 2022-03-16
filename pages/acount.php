@@ -8,9 +8,9 @@
           <div class="card-body">
             <div  class="d-flex justify-content-between">
                 <div class="m-3  d-flex">
-                    <div class=" bg-secondary rounded m-3"><img src="../images/logo/avatar.png" alt="" class="logo"></div>
+                    <div class="m-3"><img src="../images/lisa.png" alt="30" class="rounded-circle" width="150%" height="70vh"></div>
                     <div class="m-3">
-                        <p> Somnak Kalan</p>
+                        <p> <b> Lalisa</b></p>
                         <p><small>20M Friends</small></p>
                     </div>
                 </div>

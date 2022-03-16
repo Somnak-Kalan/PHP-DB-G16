@@ -63,9 +63,9 @@
                         <div class="card-body d-flex justify-content-between">
 
                             <div  class=" d-flex ">
-                                    <div class=" bg-secondary rounded m-3"><img src="../images/logo/avatar.png" alt="" class="logo"></div>
-                                    <div class="text-white  fw-bold">
-                                        <p> Somnak Kalan</p>
+                                    <div ><img src="../images/lisa.png" alt="30" class="rounded-circle" width="100%" height="70vh"></div>
+                                    <div class="text-dark  fw-bold m-3">
+                                        <p > Lalalisa</p>
                                         <p><small>Sep 7 at 12:00 AM</small></p>
                                     </div>
                             </div>
