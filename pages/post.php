@@ -1,34 +1,65 @@
-
-
-
-
-
-<div  class="container-fluid mt-3">
+    <?php
+        require_once("acount.php")
+    ?>
+    <div  class="container-fluid mt-3">
         <div class="row  my-auto">
-            <!-- sideleft -->
-            <div style="position:fixed;" class="left  col-md-2 ">
-                    <div class="d-flex"> 
-                        <p class="w-25" style="background:grey;border-radius: 40px;padding:25px;"> </p>
-                        <p class="fw-bold mt-3">Somnak Kalan</p>
+ <!-- left side   -->
+            <div style="background: rgb(192, 187, 157);margin-left:5em;" class="left  col-md-3 " >
+                    <div class="mt-3">
+                        <form action="">
+                            <div>
+                                <textarea class="form-control" rows="" cols=""></textarea>
+                            </div>
+                            <div class="text-center">
+                                <h3><a class="nav-link text-black"href="">Edit Bio</a></h3>
+                            </div>
+                        </form>
                     </div>
-                <div class="d-flex mt-5"><i class="fa-solid fa-user-group m-2"></i><a href="" class="nav-link">Friends</a></div>
-                <div class="d-flex mt-5"><i class="fa-solid fa-clock m-2"></i><a href="" class="nav-link">Memories</a></div>
-                <div class="d-flex mt-5"><i class="fa-solid fa-circle-chevron-down m-2"></i><a href="" class="nav-link">Mores</a></div>
+                    <div >
+                        <form action="">
+
+                            <div class="d-flex"><i class="fa-solid fa-graduation-cap m-1"></i><p>Studied at PNC</p></div>
+                            <div class="d-flex"><i class="fa-solid fa-house-chimney m-1"></i><p>Lives in Phnom Penh</p></div>
+                            <div class="d-flex"><i class="fa-solid fa-location-dot m-1"></i><p>From Banlung</p></div>
+                            <div class="d-flex"><i  class="fa-solid fa-heart m-1"></i><p>Single</p></div>
+                            
+                            <div class="text-center">
+                                <h3><a class="nav-link text-black"href="">Edit Detailed</a></h3>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Favourite -->
+                    <div>
+                        <form action="" >
+                            <h3 class="text-center">Favourite</h3>
+                            <p>listening music</p>
+                            <p>Movies</p>
+                            <p>Cyclings</p>
+                            <p>Sing</p>
+                            <p>Hang Out</p>
+                            <div class="text-center">
+                                <h3><a class="nav-link text-black"href="">Edit </a></h3>
+                            </div>
+
+                        </form>
+                    </div>
             </div>  
-            <!--side  right -->
-            <div class="w-50 m-auto  col-md-3">
+            <div class="w-50 m-auto  col-md-5">
                     <div style="background: rgb(192, 187, 187);" class="card-post rounded p-4 ">
                 <div class="logo d-flex">
                     <p style="background:grey;border-radius: 40px;padding:25px;"></p>
                     <p style="margin-left:40px;margin-top:5px;padding:1px;" class="bg-light form-control rounded-pill" ><a class="nav-link" href="">What is your mind,Somnak</a></p>
                 </div>
                 <div style="border-top:5px solid white;padding:10px">
-                    <ul class="nav  ">
+                    <ul class="nav ">
                         <li><a class="nav-link text-white" href="">Photos/Video</a></li>
                     </ul>
                         </div>
                     </div>
-                <div style="background: rgb(192, 187, 187);" class="right mt-3 p-3 rounded">
+
+<!--side right -->
+                <div style="background: rgb(192, 187, 187);" class="right mt-3 p-3 rounded verflow-auto">
+                    <!-- <div class="" style="background: rgb(192, 187, 187);" > -->
                         <div class="card-body d-flex justify-content-between">
 
                             <div  class=" d-flex ">
