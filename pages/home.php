@@ -1,9 +1,57 @@
 
-
-
-
+<?php
+    require_once("module.php");
+?>
 
 <div  class="container-fluid mt-3">
+    <!-- --------------modal------------------ -->
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="d-flex">
+                            <p style="background:grey;border-radius: 40px;padding:25px;"></p>
+                            <p>Somnak Kalan</p>
+                        </div>
+                        <!-- form for post any content  -->
+                        <form action="">
+                            <div>
+                                <textarea class="form-control" placeholder="What is your mind"></textarea>
+                            </div>
+                            <div class="card mt-3">
+                                <div class="d-flex justify-content-between  ">
+                                    <div class="input-group">
+                                        <div class="custom-file d-flex justify-content-center">
+                                            <input class="d-none" type="file" class="custom-file-input" id="inputGroupFile01"
+                                            aria-describedby="inputGroupFileAddon01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Add your post</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="../images/logo/avatar.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer form-group">
+                                <button class="btn form-control btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">POST</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ---------modal------- -->
+
+
+
+
         <div class="row  my-auto">
             <!-- sideleft -->
             <div style="position:fixed;" class="left  col-md-2 ">
@@ -18,17 +66,21 @@
             </div>  
             <!--side  right -->
             <div class="w-50 m-auto  col-md-3">
-                    <div style="background: rgb(192, 187, 187);" class="card-post rounded p-4 ">
+                <div style="background: rgb(192, 187, 187);" class="card-post rounded p-4 ">
                 <div class="logo d-flex">
                     <!-- <p style="background:grey;border-radius: 40px;padding:25px;"></p> -->
-                    <a><img src="../images/lisa.png" alt="30" class="rounded-circle" width="150%" height="70vh"></a><p style="margin-left:40px;margin-top:5px;padding:1px;" class="bg-light form-control rounded-pill" ><a class="nav-link" href="">What is your mind,Somnak</a></p>
+                    <div ><img src="../images/lisa.png" alt="30" class="rounded-circle" width="100%" height="70vh"></div>
+                    <p  style="background: rgb(192, 187, 187);" class=" form-control form-group" >
+                        <a class="btn w-100 bg-light rounded-pill form-control" data-bs-toggle="modal" href="../home.php#exampleModalToggle" role="button">What is your mind?</a>
+
+                    </p>
                 </div>
                 <div style="border-top:5px solid white;padding:10px">
                     <ul class="nav  ">
                         <li><a class="nav-link text-white" href="">Photos/Video</a></li>
                     </ul>
-                        </div>
                     </div>
+                </div>
                 <div style="background: rgb(192, 187, 187);" class="right mt-3 p-3 rounded">
                         <div class="card-body d-flex justify-content-between">
 
@@ -39,13 +91,16 @@
                                         <p><small>Sep 7 at 12:00 AM</small></p>
                                     </div>
                             </div>
-                            <p class="card-text text-end"><a href="" class="nav-link"><i class="fa-solid fa-ellipsis fs-5"></i></a> </p>
+                            <!-- <p class="card-text text-end"><a href="" class="nav-link"><i class="fa-solid fa-ellipsis fs-5"></i></a> </p> -->
+                            <p class="card-text text-end">
+                                <a class="" data-bs-toggle="modal" href="#somnakexampleModalToggle" role="button"><i class="fa-solid fa-ellipsis fs-5 text-black fw-bold"></i></a>
+                            </p>
                         </div>
                         <div class="text-white fw-bold">
                             <p>Here I am with new style.</p>
                         </div>
                         <div class="text-center">
-                            <img src="../images/post1.png" class="card-img-top" alt="...">
+                            <img src="../images/lisa.jpg" class="card-img-top" alt="...">
                         </div>
                         <div>
                             <div class="d-flex justify-content-between text-white fw-bold">
