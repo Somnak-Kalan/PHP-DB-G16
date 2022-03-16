@@ -1,10 +1,23 @@
-
 <?php
-    require_once("modal.php");
+// ================================= require database from models folder =======================
+require_once "models/database.php";
+// ================================= function to insert input into DB ==================================
+function display_post()
+{
+    global $database;
+    $statement=$database->prepare("SELECT*FROM posts");
+    $statement->execute();
+    return $statement-> fetchAll();
 
+        // return $statement -> rowCount()>0;
+}
+// ================================== To check input NULL/NOT ==============================================
 ?>
-
-<div  class="container-fluid mt-3">
+   <?php
+    $getItems=display_post();
+    foreach ($getItems as $item):
+    ?>
+    <div  class="container-fluid mt-3">
     
 
         <div class="row  my-auto">
@@ -52,10 +65,11 @@
                             </p>
                         </div>
                         <div class="text-white fw-bold">
-                            <p>Here I am with new style.</p>
+                            <p><?php echo $item['content']?></p>
                         </div>
                         <div class="text-center">
                             <img src="../images/lisa.jpg" class="card-img-top" alt="...">
+                          
                         </div>
                         <div>
                             <div class="d-flex justify-content-between text-white fw-bold">
@@ -84,3 +98,5 @@
             </div>
         </div>
     </div>
+
+<?php endforeach?>
