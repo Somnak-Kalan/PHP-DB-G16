@@ -5,14 +5,14 @@
 
 <div  class="container-fluid mt-3">
     <!-- --------------modal------------------ -->
-        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+                    <h5 class="modal-title" id="exampleModalToggleLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body bg-dark text-white">
                     <div>
                         <div class="d-flex">
                             <p style="background:grey;border-radius: 40px;padding:25px;"></p>
@@ -21,19 +21,26 @@
                         <!-- form for post any content  -->
                         <form action="">
                             <div>
-                                <textarea class="form-control" placeholder="What is your mind"></textarea>
+                                <textarea class="form-control bg-dark border border-dark" placeholder="What is your mind"></textarea>
+                                <label for="colorInput" class="m-3">
+                                <img src="../images/color.png" alt="" width="20%">
+                                <input type="color" id="colorInput" class="d-none">
+                                </label>
                             </div>
                             <div class="card mt-3">
-                                <div class="d-flex justify-content-between  ">
-                                    <div class="input-group">
-                                        <div class="custom-file d-flex justify-content-center">
-                                            <input class="d-none" type="file" class="custom-file-input" id="inputGroupFile01"
-                                            aria-describedby="inputGroupFileAddon01">
+                                <div class="d-flex justify-content-between bg-dark ">
+                                    <div class="input-group bg-dark">
+                                        <div class="custom-file d-flex justify-content-center bg-dark">
                                             <label class="custom-file-label" for="inputGroupFile01">Add your post</label>
+                                                <label for="addImg">
+                                                    <input type="file" id="addImg" class="d-none ">
+                                                <img src="../images/img.png" alt="40" width="30%">
+                                            </label>
+                                        
                                         </div>
                                     </div>
                                     <div>
-                                        <img src="../images/logo/avatar.png" alt="">
+                                        <a href=""><img src="../images/emoji.png" alt="" width="30%"></a>
                                     </div>
                                 </div>
                             </div>
