@@ -13,10 +13,6 @@ function display_post()
 }
 // ================================== To check input NULL/NOT ==============================================
 ?>
-   <?php
-    $getItems=display_post();
-    foreach ($getItems as $item):
-    ?>
     <div  class="container-fluid mt-3">
     
 
@@ -49,6 +45,10 @@ function display_post()
                     </ul>
                     </div>
                 </div>
+                <?php
+                $getItems=display_post();
+                foreach ($getItems as $item):
+                ?>
                 <div style="background: rgb(192, 187, 187);" class="right mt-3 p-3 rounded">
                         <div class="card-body d-flex justify-content-between">
 
@@ -92,11 +92,10 @@ function display_post()
                         
                         </div>
                     <!-- </div> -->
-
+                    
                 </div>
+                <?php endforeach?>
 
             </div>
         </div>
     </div>
-
-<?php endforeach?>
