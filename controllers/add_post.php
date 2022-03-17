@@ -24,5 +24,5 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         add_post($content,$img);
         
     }
-    header('Location:../views/display_post.php') ; 
+    header('Location:../index.php') ; 
 }

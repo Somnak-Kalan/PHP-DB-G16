@@ -32,7 +32,7 @@ function display_post()
             <div class="w-50 m-auto  col-md-3">
                 <div style="background: rgb(192, 187, 187);" class="card-post rounded p-4 ">
                 <div class="logo d-flex">
-                    <!-- <p style="background:grey;border-radius: 40px;padding:25px;"></p> -->
+
                     <div ><img src="../images/lisa.png" alt="30" class="rounded-circle" width="100%" height="70vh"></div>
                     <p  style="background: rgb(192, 187, 187);" class=" form-control form-group" >
                         <a class="btn w-100 bg-light rounded-pill form-control" data-bs-toggle="modal" href="../home.php#exampleModalToggle" role="button">What is your mind?</a>

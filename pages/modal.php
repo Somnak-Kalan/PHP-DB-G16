@@ -4,9 +4,9 @@ require_once "models/database.php";
 function display()
 {
     global $database;
-    $statement=$database->prepare("SELECT post_id FROM posts ");
+    $statement=$database->prepare("SELECT * FROM posts ");
     $statement->execute();
-    return $statement-> fetch();
+    return $statement-> fetchAll();
 
         // return $statement -> rowCount()>0;
 }
@@ -15,7 +15,7 @@ function display()
    <?php
     $getItems=display();
     foreach($getItems as $item){
-        echo $item;
+        echo $item['post_id'];
     }
     
 
@@ -41,7 +41,7 @@ function display()
         <div class="border">
             <div class="">
                 <a class="nav-link text-black fw-bold" href="">EDIT</a>
-                <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php echo $item?>" >DELETE</a>
+                <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php echo $item['post_id']?>" >DELETE</a>
             </div>
       </div>
     </div>

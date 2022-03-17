@@ -8,4 +8,5 @@ isset($_GET['id'])? $id = $_GET['id']:$id=null;
 if($id!==null){
     deletePost($id);
 }
+header('Location:../index.php');
 
