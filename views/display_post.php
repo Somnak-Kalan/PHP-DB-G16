@@ -68,7 +68,7 @@ function display_post()
                             <p><?php echo $item['content']?></p>
                         </div>
                         <div class="text-center">
-                            <img src="../images/lisa.jpg" class="card-img-top" alt="...">
+                            <img src="../images/hyunjin.jpeg" class="card-img-top" alt="...">
                           
                         </div>
                         <div>
