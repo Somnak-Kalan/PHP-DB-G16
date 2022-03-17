@@ -1,25 +1,12 @@
 <?php
 require_once "models/database.php";
-// ================================= function to insert input into DB ==================================
-function display()
-{
-    global $database;
-    $statement=$database->prepare("SELECT * FROM posts ");
-    $statement->execute();
-    return $statement-> fetchAll();
-
-        // return $statement -> rowCount()>0;
-}
 // ================================== To check input NULL/NOT ==============================================
-?>
+// ?>
    <?php
-    $getItems=display();
-    foreach($getItems as $item){
-        echo $item['post_id'];
-    }
-    
+    $posts=getPosts();
+    foreach($posts as $post):
 
-    ?>
+ ?>
 
 
 
@@ -40,14 +27,15 @@ function display()
         </div>
         <div class="border">
             <div class="">
-                <a class="nav-link text-black fw-bold" href="">EDIT</a>
-                <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php echo $item['post_id']?>" >DELETE</a>
+                <a class="nav-link text-black fw-bold" href="../views/edit_post.php?id=<?php echo $post['post_id'] ?>">EDIT</a>
+                <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php echo $post['post_id']?>" >DELETE</a>
             </div>
       </div>
     </div>
   </div>
 </div>
 </div>
+<?php  endforeach?>
 <!-- --------------modal------------------ -->
 
       <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">

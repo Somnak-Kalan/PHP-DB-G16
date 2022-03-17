@@ -41,7 +41,7 @@ function display_post()
                 </div>
                 <div style="border-top:5px solid white;padding:10px">
                     <ul class="nav  ">
-                        <li><a class="nav-link text-white" href="">Photos/Video</a></li>
+                        <li><a class="nav-link text-white" href="">Photos/Video </a></li>
                     </ul>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ function display_post()
                                     <div class=" bg-secondary rounded m-3"><img src="../images/logo/avatar.png" alt="" class="logo"></div>
                                     <div class="text-white  fw-bold">
                                         <p> Somnak Kalan</p>
-                                        <p><small>Sep 7 at 12:00 AM</small></p>
+                                        <p><small><?php echo $item['post_date']?></small></p>
                                     </div>
                             </div>
                             <!-- <p class="card-text text-end"><a href="" class="nav-link"><i class="fa-solid fa-ellipsis fs-5"></i></a> </p> -->
