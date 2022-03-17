@@ -1,22 +1,47 @@
+<?php
+require_once "models/database.php";
+// ================================= function to insert input into DB ==================================
+function display()
+{
+    global $database;
+    $statement=$database->prepare("SELECT post_id FROM posts ");
+    $statement->execute();
+    return $statement-> fetch();
+
+        // return $statement -> rowCount()>0;
+}
+// ================================== To check input NULL/NOT ==============================================
+?>
+   <?php
+    $getItems=display();
+    foreach($getItems as $item){
+        echo $item;
+    }
+    
+
+    ?>
+
+
+
 
 <!-- delete module ---------------- -->
 <div class="modal fade" id="somnakexampleModalToggle" aria-hidden="true" aria-labelledby="somnakexampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="somnakexampleModalToggleLabel">Modal 1</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="border">
-          <div class="text-black">
-              <a class="nav-link text-black fw-bold" href="">PIN</a>
-              <a class="nav-link text-black fw-bold" href="">SAVE</a>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="somnakexampleModalToggleLabel">Modal 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="border">
+                <div class="text-black">
+                    <a class="nav-link text-black fw-bold" href="">PIN</a>
+                    <a class="nav-link text-black fw-bold" href="">SAVE</a>
           </div>
         </div>
         <div class="border">
             <div class="">
                 <a class="nav-link text-black fw-bold" href="">EDIT</a>
-                <a class="nav-link text-black fw-bold" href="">DELETE</a>
+                <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php echo $item?>" >DELETE</a>
             </div>
       </div>
     </div>
@@ -78,5 +103,3 @@
             </div>
         </div>
 
-
-<!-- ---------modal------- -->

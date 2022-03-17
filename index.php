@@ -1,4 +1,5 @@
 <?php
+require_once('models/post.php');
 /**
  * Your code here
  */
@@ -22,4 +23,4 @@ else{
     require_once "pages/home.php";
 }
 require_once "templates/footer.php";
-require_once "controllers/display_post.php";
+require_once "views/display_post.php";

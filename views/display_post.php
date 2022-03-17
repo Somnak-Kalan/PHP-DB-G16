@@ -1,6 +1,6 @@
 <?php
 // ================================= require database from models folder =======================
-require_once "models/database.php";
+require_once "models/post.php";
 // ================================= function to insert input into DB ==================================
 function display_post()
 {
