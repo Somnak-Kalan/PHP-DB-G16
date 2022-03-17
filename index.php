@@ -22,5 +22,5 @@ if(isset($_GET["pages"])){
 else{
     require_once "pages/home.php";
 }
-require_once "templates/footer.php";
 require_once "views/display_post.php";
+require_once "templates/footer.php";

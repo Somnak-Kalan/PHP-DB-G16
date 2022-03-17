@@ -9,7 +9,6 @@ function display_post()
     $statement->execute();
     return $statement-> fetchAll();
 
-        // return $statement -> rowCount()>0;
 }
 // ================================== To check input NULL/NOT ==============================================
 ?>
@@ -59,7 +58,7 @@ function display_post()
                                         <p><small><?php echo $item['post_date']?></small></p>
                                     </div>
                             </div>
-                            <!-- <p class="card-text text-end"><a href="" class="nav-link"><i class="fa-solid fa-ellipsis fs-5"></i></a> </p> -->
+                           
                             <p class="card-text text-end">
                                 <a class="" data-bs-toggle="modal" href="#somnakexampleModalToggle" role="button"><i class="fa-solid fa-ellipsis fs-5 text-black fw-bold"></i></a>
                             </p>
@@ -68,7 +67,8 @@ function display_post()
                             <p><?php echo $item['content']?></p>
                         </div>
                         <div class="text-center">
-                            <img src="../images/lisa.jpg" class="card-img-top" alt="...">
+                            <img src="../images/<?= $item['img']?>" class="card-img-top" alt="...">
+
                           
                         </div>
                         <div>
