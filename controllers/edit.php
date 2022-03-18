@@ -5,7 +5,7 @@ require_once('../models/post.php');
     $id =$_POST['id'];
     $img = $_POST['img'];
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        if(!empty($content)){
+        if(!empty($content) or !empty($id) or !empty($img)){
             updatePost($content,$id,$img);
         }
         header('Location:../index.php') ;
