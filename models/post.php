@@ -56,11 +56,28 @@ function addUser($full_name,$email,$phone,$location,$birth_date,$gender,$passwor
         ':password'=>$password,
     ]);
 }
-function getUser() {
+function getUser(){
     global $database;
     $statement=$database->prepare("SELECT * FROM users");
     $statement->execute();
     return $statement->fetchAll();
 }
-
+function getUserById($id){
+    global $database;
+    $statement=$database->prepare("SELECT * FROM users WHERE user_id=:id");
+    $statement->execute([
+        ':id'=>$id,
+    ]);
+    return $statement->fetch();
+}
+function updateProfile($full_name,$id,$profile_img,$cover_img){
+    global $database;
+    $statement=$database->prepare("UPDATE users SET full_name=:full_name,profile_img=:profile_img,cover_img=:cover_img WHERE user_id=:id");
+    $statement->execute([
+        ':full_name'=>$full_name,
+        ':id'=>$id,
+        ':profile_img'=>$profile_img,
+        ':cover_img'=>$cover_img,
+    ]);
+}
 // ----------------
