@@ -32,13 +32,14 @@ function getPostById($id){
     return $statement->fetch();
 }
 // update post when user want to change    
-function updatePost($content)
+function updatePost($content,$id,$img)
 {
     global $database;
-    $statement=$database->prepare("UPDATE posts SET content=:content WHERE post_id=:id");
+    $statement=$database->prepare("UPDATE posts SET content=:content, img=:img WHERE post_id=:id");
     $statement->execute([
         ':content' => $content,
         ':id' => $id,
+        ':img' => $img,
     ]);
 }
 // table users 
@@ -61,4 +62,5 @@ function getUser() {
     $statement->execute();
     return $statement->fetchAll();
 }
+
 // ----------------

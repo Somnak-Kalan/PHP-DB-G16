@@ -37,7 +37,7 @@ function display_post()
                     <div ><img src="../images/lisa.png" alt="30" class="rounded-circle" width="100%" height="70vh"></div>
                     <p  style="background: rgb(192, 187, 187);" class=" form-control form-group" >
                         <a class="btn w-100 bg-light rounded-pill form-control" data-bs-toggle="modal" href="../home.php#exampleModalToggle" role="button">What is your mind?</a>
-
+                        
                     </p>
                 </div>
                 <div style="border-top:5px solid white;padding:10px">
