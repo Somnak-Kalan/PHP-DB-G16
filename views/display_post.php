@@ -1,6 +1,7 @@
 <?php
 // ================================= require database from models folder =======================
 require_once "models/post.php";
+require_once "get_comment.php";
 // ================================= function to insert input into DB ==================================
 function display_post()
 {
@@ -37,7 +38,7 @@ function display_post()
                     <div ><img src="../images/lisa.png" alt="30" class="rounded-circle" width="100%" height="70vh"></div>
                     <p  style="background: rgb(192, 187, 187);" class=" form-control form-group" >
                         <a class="btn w-100 bg-light rounded-pill form-control" data-bs-toggle="modal" href="../home.php#exampleModalToggle" role="button">What is your mind?</a>
-
+                        
                     </p>
                 </div>
                 <div style="border-top:5px solid white;padding:10px">
@@ -46,6 +47,9 @@ function display_post()
                     </ul>
                     </div>
                 </div>
+                
+                
+                <!-- ================================= Loop post======================================================== -->
                 <?php
                 $getItems=display_post();
                 foreach ($getItems as $item):
@@ -66,6 +70,7 @@ function display_post()
                                 <!-- <a class="" data-bs-toggle="modal" href="#somnakexampleModalToggle" role="button"><i class="fa-solid fa-ellipsis fs-5 text-black fw-bold"></i></a> -->
                             </p>
                         </div>
+                        <!-- ============================================== post photos and content=================================== -->
                         <div class="text-white fw-bold">
                             <p><?php echo $item['content']?></p>
                         </div>
@@ -73,23 +78,53 @@ function display_post()
                             <img src="../images/<?= $item['img']?>" class="card-img-top" alt="...">
                           
                         </div>
+                        <!-- =================================================== Like and comment number======================================= -->
+                        <?php
+                            $comments_total=count_comment();
+                            foreach ($comments_total as $comment_num):
+                             
+                        ?>
                         <div>
                             <div class="d-flex justify-content-between text-white fw-bold">
                                 <p>20Likes</p>
-                                <p>10M comments</p>
+                               
+                                <button type="button" id='show_comment' class="btn text-white"><b><?=$comment_num[0]?>M comments</b></button>
+                              
                             </div>
                             <hr>
+                            <?php endforeach?>
+                            <!-- ================================================== comment list============================================== -->
+                            <div class=" comment card border border-0" style="background: rgb(192, 187, 187);">
+                            <?php
+                                $comments=get_comment();
+                                foreach ($comments as $comment):
+                                ?>
+                                    <p class="border border-white text-white p-1 " style="background:rgb(162, 187, 187)"><?=$comment["comment_content"]?></p>
+                                    <?php endforeach?>
+                                </div>
+                           
                             <div>
                                 <ul class="navbar nav text-white fw-bold p-0 m-0">
                                     <div class="d-flex"><i class="fa-solid fa-thumbs-up m-1"></i><li>Like</li></div>
-                                    <li>comment</li>
+                                    <button type="button" class="btn text-white"><b>comment</b></button>
                                 </ul>
+                              
                             </div>
                             <hr>
     
                             <div class="logo d-flex">
                                 <p style="background:grey;border-radius: 40px;padding:25px;"></p>
-                                <p style="margin-left:40px;margin-top:5px;padding:1px;" class="bg-light form-control rounded-pill" ><a class="nav-link" href="">comment</a></p>
+                                <!-- <p style="margin-left:40px;margin-top:5px;padding:1px;" class="bg-light form-control rounded-pill" ><a class="nav-link" href="">comment</a></p> -->
+                                <form action="../controllers/add_comment.php" method="post" class="form-control border-0"  style="background: rgb(192, 187, 187);">
+                                
+                                    <div class="input-group mb-3">
+                                    <input type="text" name="comment" class="form-control  " placeholder="Write comment..." aria-label="Write comment..." aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn rounded-0 bg-white"><img src="../images/send.png" alt="" width="80%" ></button>
+                                    </div>
+                                    </div>
+                                </form>
+                                
                             </div>
                         
                         </div>
@@ -101,3 +136,4 @@ function display_post()
             </div>
         </div>
     </div>
+    <script src="../js/main.js" ></script>
