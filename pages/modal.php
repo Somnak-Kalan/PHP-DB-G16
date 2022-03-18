@@ -1,18 +1,19 @@
 <?php
-require_once "models/database.php";
+// require_once "models/database.php";
 // ================================== To check input NULL/NOT ==============================================
 // ?>
    <?php
-    $posts=getPosts();
-    foreach($posts as $post):
-
- ?>
-
+    require_once('views/display_post.php');
+    // $post =getPosts();
+    // foreach($post as $posts){
 
 
+
+?>
 
 <!-- delete module ---------------- -->
-<div class="modal fade" id="somnakexampleModalToggle" aria-hidden="true" aria-labelledby="somnakexampleModalToggleLabel" tabindex="-1">
+<!-- <div class="modal fade" id="somnakexampleModalToggle" aria-hidden="true" aria-labelledby="somnakexampleModalToggleLabel" tabindex="-1">
+
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -27,15 +28,16 @@ require_once "models/database.php";
         </div>
         <div class="border">
             <div class="">
-                <a class="nav-link text-black fw-bold" href="../views/edit_post.php?id=<?php echo $post['post_id'] ?>">EDIT</a>
-                <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php echo $post['post_id']?>" >DELETE</a>
+                    <a class="nav-link text-black fw-bold" href="../views/edit_post.php?id=<?php //echo $item['post_id']?>">EDIT</a>
+                    <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php //echo $item['post_id']
+                ?>" >DELETE</a>
             </div>
       </div>
     </div>
   </div>
 </div>
-</div>
-<?php  endforeach?>
+</div> -->
+
 <!-- --------------modal------------------ -->
 
       <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">

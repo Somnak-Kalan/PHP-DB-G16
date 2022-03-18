@@ -1,9 +1,4 @@
 
-    <?php
-        require_once("acount.php");
-        require_once("modal.php");
-    ?>
-
     <div  class="container-fluid mt-3">
 
 

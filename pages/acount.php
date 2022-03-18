@@ -1,4 +1,10 @@
+<?php 
+    require_once('models/post.php');
+    $getUser = getUser();
+    foreach ($getUser as  $value){
 
+    }
+?>
 <div class="">
     <div style="background: rgb(192, 187, 187);" class=" container-fluid pt-4">
         <div style="" class="w-75 m-auto mt-4" >
@@ -10,7 +16,7 @@
                 <div class="m-3  d-flex">
                     <div class="m-3"><img src="../images/lisa.png" alt="30" class="rounded-circle" width="150%" height="70vh"></div>
                     <div class="m-3">
-                        <p> <b> Lalisa</b></p>
+                        <p> <b> <?php echo $value['full_name']; ?></b> </p>
                         <p><small>20M Friends</small></p>
                     </div>
                 </div>
@@ -28,7 +34,5 @@
           </div>
         </div>
     </div>
-    <div class="mt-3">
-        <?php require_once("post.php") ?>
-    </div>
+    <?php require_once('post.php'); ?>
 </div>

@@ -4,13 +4,13 @@
     // require_once("views/displa.php");
 
 ?>
-<!-- 
+
 <div  class="container-fluid mt-3">
     
 
-        <div class="row  my-auto"> -->
+        <div class="row  my-auto"> \
             <!-- sideleft -->
-            <!-- <div style="position:fixed;" class="left  col-md-2 ">
+             <div style="position:fixed;" class="left  col-md-2 ">
                     <div class="d-flex"> 
                        
                         <img src="../images/lisa.png" alt="30" class="rounded-circle" width="40%" height="90vh">
@@ -19,9 +19,9 @@
                 <div class="d-flex mt-5"><i class="fa-solid fa-user-group m-2"></i><a href="" class="nav-link">Friends</a></div>
                 <div class="d-flex mt-5"><i class="fa-solid fa-clock m-2"></i><a href="" class="nav-link">Memories</a></div>
                 <div class="d-flex mt-5"><i class="fa-solid fa-circle-chevron-down m-2"></i><a href="" class="nav-link">Mores</a></div>
-            </div>   -->
+            </div>   
             <!--side  right -->
-            <!-- <div class="w-50 m-auto  col-md-3">
+            <div class="w-50 m-auto  col-md-3">
                 <div style="background: rgb(192, 187, 187);" class="card-post rounded p-4 ">
                 <div class="logo d-flex">
                     
@@ -46,9 +46,9 @@
                                         <p> Somnak Kalan</p>
                                         <p><small>Sep 7 at 12:00 AM</small></p>
                                     </div>
-                            </div> -->
+                            </div> 
                            
-                            <!-- <p class="card-text text-end">
+                             <p class="card-text text-end">
                                 <a class="" data-bs-toggle="modal" href="#somnakexampleModalToggle" role="button"><i class="fa-solid fa-ellipsis fs-5 text-black fw-bold"></i></a>
                             </p>
                         </div>
@@ -84,4 +84,4 @@
 
             </div>
         </div>
-    </div> -->
+    </div> 

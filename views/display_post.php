@@ -10,8 +10,10 @@ function display_post()
     return $statement-> fetchAll();
 
 }
+
 // ================================== To check input NULL/NOT ==============================================
 ?>
+
     <div  class="container-fluid mt-3">
     
 
@@ -50,7 +52,7 @@ function display_post()
                 ?>
                 <div style="background: rgb(192, 187, 187);" class="right mt-3 p-3 rounded">
                         <div class="card-body d-flex justify-content-between">
-
+                            <!-- make it to edit post   -->
                             <div  class=" d-flex ">
                                     <div class=" bg-secondary rounded m-3"><img src="../images/logo/avatar.png" alt="" class="logo"></div>
                                     <div class="text-white  fw-bold">
@@ -58,9 +60,10 @@ function display_post()
                                         <p><small><?php echo $item['post_date']?></small></p>
                                     </div>
                             </div>
-                           
-                            <p class="card-text text-end">
-                                <a class="" data-bs-toggle="modal" href="#somnakexampleModalToggle" role="button"><i class="fa-solid fa-ellipsis fs-5 text-black fw-bold"></i></a>
+                            <p class="card-text text-end d-flex">
+                                    <a class="nav-link text-black fw-bold" href="../views/edit_post.php?id=<?php echo $item['post_id']?>">EDIT</a>
+                                    <a class="nav-link text-black fw-bold"  href="../controllers/delete_post.php?id=<?php echo $item['post_id']?>" >DELETE</a>
+                                <!-- <a class="" data-bs-toggle="modal" href="#somnakexampleModalToggle" role="button"><i class="fa-solid fa-ellipsis fs-5 text-black fw-bold"></i></a> -->
                             </p>
                         </div>
                         <div class="text-white fw-bold">
@@ -68,7 +71,6 @@ function display_post()
                         </div>
                         <div class="text-center">
                             <img src="../images/<?= $item['img']?>" class="card-img-top" alt="...">
-
                           
                         </div>
                         <div>
