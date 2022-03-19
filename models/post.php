@@ -2,14 +2,15 @@
 require_once('database.php');
 // Get all posts to table posts
 // @return all posts 
-function add_post($content,$img)
+function add_post($content,$img,$user_id)
 {
     global $database;
-    $statement=$database->prepare("INSERT INTO posts(content,img)VALUES(:content,:img)");
+    $statement=$database->prepare("INSERT INTO posts(content,img,user_id)VALUES(:content,:img,:user_id)");
     $statement->execute(
         [
             ':content'=>$content,
             ':img'=>$img,
+            ':user_id'=>$user_id,
         ]
         );
         // return $statement -> rowCount()>0;
