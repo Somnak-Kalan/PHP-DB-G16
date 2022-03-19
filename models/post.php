@@ -51,14 +51,14 @@ function get_post_by_id($id){
     return $statement->fetch();
 }
 // update post when user want to change    
-function updatePost($content,$id,$img)
+function updatePost($content,$img,$id,)
 {
     global $database;
     $statement=$database->prepare("UPDATE posts SET content=:content, img=:img WHERE post_id=:id");
     $statement->execute([
         ':content' => $content,
-        ':id' => $id,
         ':img' => $img,
+        ':id' => $id,
     ]);
 }
 
