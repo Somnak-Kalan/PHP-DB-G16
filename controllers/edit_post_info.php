@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 require_once('../models/post.php');
     $content =$_POST['content'];
     $id =$_POST['id'];
@@ -10,4 +10,6 @@ require_once('../models/post.php');
         }
         header('Location:../index.php') ;
     }
+    header('Location:../index.php');
+}
 ?>
