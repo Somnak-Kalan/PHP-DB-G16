@@ -1,10 +1,24 @@
 <?php
-/**
- * Your code here
- */
 require_once('database.php');
-// craete post 
-function getPosts()
+// Get all posts to table posts
+// @return all posts 
+function add_post($content,$img)
+{
+    global $database;
+    $statement=$database->prepare("INSERT INTO posts(content,img)VALUES(:content,:img)");
+    $statement->execute(
+        [
+            ':content'=>$content,
+            ':img'=>$img,
+        ]
+        );
+        // return $statement -> rowCount()>0;
+}
+
+
+// Get all posts
+// @return all posts 
+function get_all_posts()
 {
     global $database;
     $statement=$database->prepare("SELECT * FROM posts ");
@@ -13,7 +27,8 @@ function getPosts()
 }
 
 
-// delete post  
+// Delete the post from given id
+// @param $id (integer) the id of the post
 function deletePost($id){
     global $database;
     $statement=$database->prepare("DELETE FROM posts WHERE post_id=:id");
@@ -22,8 +37,12 @@ function deletePost($id){
     ]);
     header('Location:../pages/home.php');
 }
-// get id of post to delete and update  
-function getPostById($id){
+
+
+// Get the post from the id
+// @param $id (integer) the id of the post 
+// @return the post related to given id
+function get_post_by_id($id){
     global $database;
     $statement = $database->prepare("SELECT * FROM posts WHERE post_id=:id");
     $statement->execute([
@@ -42,42 +61,3 @@ function updatePost($content,$id,$img)
         ':img' => $img,
     ]);
 }
-// table users 
-function addUser($full_name,$email,$phone,$location,$birth_date,$gender,$password){
-    global $database;
-    $statement = $database->prepare("INSERT INTO users(full_name,email,phone,location,birth_date,gender,password)VALUES(:full_name,:email,:phone,:location,:birth_date,:gender,:password)");
-    $statement->execute([
-        ':full_name'=>$full_name,
-        ':email'=>$email,
-        ':phone'=>$phone,
-        ':location'=>$location,
-        ':birth_date'=>$birth_date,
-        ':gender'=>$gender,
-        ':password'=>$password,
-    ]);
-}
-function getUser(){
-    global $database;
-    $statement=$database->prepare("SELECT * FROM users");
-    $statement->execute();
-    return $statement->fetchAll();
-}
-function getUserById($id){
-    global $database;
-    $statement=$database->prepare("SELECT * FROM users WHERE user_id=:id");
-    $statement->execute([
-        ':id'=>$id,
-    ]);
-    return $statement->fetch();
-}
-function updateProfile($full_name,$id,$profile_img,$cover_img){
-    global $database;
-    $statement=$database->prepare("UPDATE users SET full_name=:full_name,profile_img=:profile_img,cover_img=:cover_img WHERE user_id=:id");
-    $statement->execute([
-        ':full_name'=>$full_name,
-        ':id'=>$id,
-        ':profile_img'=>$profile_img,
-        ':cover_img'=>$cover_img,
-    ]);
-}
-// ----------------

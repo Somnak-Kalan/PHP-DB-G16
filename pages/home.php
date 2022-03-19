@@ -1,6 +1,12 @@
 
 <?php
     require_once("modal.php");
-    // require_once("views/displa.php");
-
 ?>
+<div>
+    <?php require_once("side_left.php") ?>
+    <div class="mt-3">
+        <?php require_once("add_post_question.php"); ?>
+        <?php require_once("side_right.php") ?>
+
+    </div>
+</div>

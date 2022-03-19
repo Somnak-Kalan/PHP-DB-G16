@@ -27,7 +27,7 @@
         <!-- logo left  -->
         <div style="margin-right:10em" class="">
           <ul class="d-flex nav">
-            <li><a href="?pages=acount" class="logo rounded-5 p-2"><img style="" class="w-50"  src="../images/logo/avatar.png" alt=""></a></li>
+            <li><a href="?pages=account" class="logo rounded-5 p-2"><img class="w-50"  src="../images/logo/avatar.png" alt=""></a></li>
           </ul>
         </div>
       </div>
