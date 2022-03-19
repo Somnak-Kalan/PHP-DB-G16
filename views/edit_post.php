@@ -32,7 +32,7 @@ $get_by_id = get_post_by_id($id);
                             <label class="custom-file-label" for="inputGroupFile01">Add your post</label>
 
                             <label for="addImg">
-                                <input type="file" name="c_image" id="addImg" class="d-none ">
+                                <input type="file" name="img" id="addImg" class="d-none ">
                                 <img src="../images/img.png" alt="40" width="30%">
                             </label>
 
