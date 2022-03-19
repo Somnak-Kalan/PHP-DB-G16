@@ -11,6 +11,6 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     if(!empty($content) or $img) {
         add_post($content,$img);
         
-    }
+    };
     header('Location:../index.php') ; 
 }
