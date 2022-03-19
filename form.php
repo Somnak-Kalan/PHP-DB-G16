@@ -14,5 +14,3 @@ require_once "templates/header.php";
     else{
         require_once "form/signup.php";
     }
-    
-?>

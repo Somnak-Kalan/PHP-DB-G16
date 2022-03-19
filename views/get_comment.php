@@ -5,16 +5,14 @@ require_once "models/post.php";
 function get_comment()
 {
     global $database;
-    $statement=$database->prepare("SELECT comment_content FROM comments");
+    $statement = $database->prepare("SELECT comment_content FROM comments");
     $statement->execute();
-    return $statement-> fetchAll();
-
+    return $statement->fetchAll();
 }
 function count_comment()
 {
     global $database;
-    $statement=$database->prepare("SELECT COUNT(comment_content) FROM comments");
+    $statement = $database->prepare("SELECT COUNT(comment_content) FROM comments");
     $statement->execute();
-    return $statement-> fetchAll();
-
+    return $statement->fetchAll();
 }

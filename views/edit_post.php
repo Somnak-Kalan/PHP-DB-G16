@@ -1,11 +1,11 @@
 <?php
- require_once('../templates/header.php');
+require_once('../templates/header.php');
 
- require_once('../models/post.php');
+require_once('../models/post.php');
 ?>
 <?php
-    $id=$_GET['id'];
-    $item=getPostById($id);
+$id = $_GET['id'];
+$item = getPostById($id);
 ?>
 <div class="modal-body bg-dark rounded text-white w-75 m-auto">
     <div>
@@ -16,13 +16,13 @@
 
         <!-- form for post any content  -->
         <form action="../controllers/edit.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $item['post_id']?>">
+            <input type="hidden" name="id" value="<?php echo $item['post_id'] ?>">
             <div>
-                <textarea name="content" class="form-control bg-dark border border-dark text-white" placeholder="What is your mind" ><?= $item['content']?></textarea>
+                <textarea name="content" class="form-control bg-dark border border-dark text-white" placeholder="What is your mind"><?= $item['content'] ?></textarea>
 
                 <label for="colorInput" class="m-3">
-                <img src="../images/color.png" alt="" width="20%">
-                <input type="color" name="color" id="colorInput" class="d-none" >
+                    <img src="../images/color.png" alt="" width="20%">
+                    <input type="color" name="color" id="colorInput" class="d-none">
                 </label>
             </div>
             <div class="card mt-3">
@@ -31,11 +31,11 @@
                         <div class="custom-file d-flex justify-content-center bg-dark">
                             <label class="custom-file-label" for="inputGroupFile01">Add your post</label>
 
-                                <label for="addImg">
-                                    <input type="file" name="img" id="addImg" class="d-none ">
-                                    <img src="../images/img.png" alt="40" width="30%">
-                                </label>
-                        
+                            <label for="addImg">
+                                <input type="file" name="img" id="addImg" class="d-none ">
+                                <img src="../images/img.png" alt="40" width="30%">
+                            </label>
+
                         </div>
                     </div>
                     <div>
@@ -51,4 +51,4 @@
 </div>
 
 
-<?php require_once('../templates/footer.php')?>
+<?php require_once('../templates/footer.php') ?>

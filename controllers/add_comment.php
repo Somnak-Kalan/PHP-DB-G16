@@ -5,24 +5,22 @@ require_once "../models/database.php";
 function add_comment($comment)
 {
     global $database;
-    $statement=$database->prepare("INSERT INTO comments(comment_content)VALUES(:comment_content)");
+    $statement = $database->prepare("INSERT INTO comments(comment_content)VALUES(:comment_content)");
     $statement->execute(
         [
-            ':comment_content'=>$comment,
-       
+            ':comment_content' => $comment,
+
         ]
-        );
-        // return $statement -> rowCount()>0;
+    );
+    // return $statement -> rowCount()>0;
 }
 // ================================== To check input NULL/NOT ==============================================
-if($_SERVER['REQUEST_METHOD']=='POST')
-{
-    $comment=$_POST['comment'];
- 
-  
-    if(!empty($comment)){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $comment = $_POST['comment'];
+
+
+    if (!empty($comment)) {
         add_comment($comment);
-        
     }
-    header('Location:../index.php') ; 
+    header('Location:../index.php');
 }

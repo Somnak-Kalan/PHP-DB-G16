@@ -2,9 +2,6 @@
 require_once "models/database.php";
 // ================================== To check input NULL/NOT ==============================================
 // ?>
-
-
-
 <!-- --------------modal------------------ -->
 
       <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -14,6 +11,7 @@ require_once "models/database.php";
                     <h5 class="modal-title" id="exampleModalToggleLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <!-- =============================================== Profile and acount name============================ -->
                 <div class="modal-body bg-dark text-white">
                     <div>
                         <div class="d-flex">
@@ -22,16 +20,18 @@ require_once "models/database.php";
                         </div>
 
                         <!-- form for post any content  -->
-                        <form action="../controllers/add_post.php" method="post">
+                        <form action="../controllers/add_post.php?id=user_id=54" method="post">
+                            <!-- ========================================  To add post contents  ================================= -->
                             <div>
                                 <textarea name="content" class="form-control bg-dark border border-dark text-white" placeholder="What is your mind" ></textarea>
-
+                                <!-- ========================================= To choose text color===================================== -->
                                 <label for="colorInput" class="m-3">
                                 <img src="../images/color.png" alt="" width="20%">
                                 <input type="color" name="color" id="colorInput" class="d-none" >
                                 </label>
 
                             </div>
+                            <!-- ======================================================= To add img to the post================================ -->
                             <div class="card mt-3">
                                 <div class="d-flex justify-content-between bg-dark ">
                                     <div class="input-group bg-dark">
@@ -45,11 +45,13 @@ require_once "models/database.php";
                                         
                                         </div>
                                     </div>
+                                    <!-- =================================================== To add feeling emoji================================== -->
                                     <div>
                                         <a href=""><img src="../images/emoji.png" alt="" width="30%"></a>
                                     </div>
                                 </div>
                             </div>
+                            <!-- =============================================================== Post btn=============================================== -->
                             <div class="modal-footer form-group">
                                 <button type="submit" class="btn form-control btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">POST</button>
                             </div>

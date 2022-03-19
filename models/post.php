@@ -32,7 +32,7 @@ function getPostById($id){
     return $statement->fetch();
 }
 // update post when user want to change    
-function updatePost($content)
+function updatePost($content,$id)
 {
     global $database;
     $statement=$database->prepare("UPDATE posts SET content=:content WHERE post_id=:id");
@@ -55,10 +55,13 @@ function addUser($full_name,$email,$phone,$location,$birth_date,$gender,$passwor
         ':password'=>$password,
     ]);
 }
-function getUser() {
+function get_user() {
     global $database;
-    $statement=$database->prepare("SELECT * FROM users");
+    $statement=$database->prepare("SELECT full_name,user_id FROM users WHERE user_id=4");
     $statement->execute();
-    return $statement->fetchAll();
+    return $statement->fetch();
 }
+
+
+
 // ----------------
