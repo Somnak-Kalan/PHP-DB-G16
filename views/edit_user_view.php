@@ -2,7 +2,7 @@
  <?php require_once '../models/user.php'?>
 <?php
 $id = $_GET['id'];
-$get_user_id= get_user_by_id($id);
+$get_user_id= get_user_name_from($id);
 
 ?>
 <div style="background: rgb(192, 187, 187);" class=" container-fluid pt-4">
@@ -14,7 +14,7 @@ $get_user_id= get_user_by_id($id);
                 <label for="addImg">
                     COVER
                     <input type="file" name="cover_img" id="addImg" class="d-none ">
-                    
+                    <img  src="../images/<?php echo $get_user_id['cover_img'] ?>" alt="">
                 </label>
     
             </div>

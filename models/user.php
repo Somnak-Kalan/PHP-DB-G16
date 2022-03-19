@@ -26,11 +26,7 @@ function get_all_user_info(){
 // Get the user name from user id
 // @param $id (integer) the id of the user 
 // @return user name 
-function getUserNameFrom($id){
-    
-}
-
-function get_user_by_id($id){
+function get_user_name_from($id){
     global $database;
     $statement=$database->prepare("SELECT * FROM users WHERE user_id=:id");
     $statement->execute([
@@ -52,7 +48,7 @@ function update_user_profile($full_name,$id,$profile_img,$cover_img){
 // @return all user_id
 function get_user_id(){
     global $database;
-    $statement = $database->prepare('SELECT user_id FROM users');
+    $statement = $database->prepare('SELECT user_id FROM users ORDER BY user_id DESC');
     $statement->execute();
     return $statement->fetch();
 }

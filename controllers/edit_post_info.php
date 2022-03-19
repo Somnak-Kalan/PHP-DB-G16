@@ -11,5 +11,4 @@ require_once('../models/post.php');
         header('Location:../index.php') ;
     }
     header('Location:../index.php');
-}
 ?>
