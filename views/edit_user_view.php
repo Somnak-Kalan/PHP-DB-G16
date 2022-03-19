@@ -4,6 +4,7 @@
 $id = $_GET['id'];
 $get_user_id= get_user_name_from($id);
 
+
 ?>
 <div style="background: rgb(192, 187, 187);" class=" container-fluid pt-4">
     <div class="w-75 m-auto ">

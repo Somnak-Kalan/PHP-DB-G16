@@ -1,4 +1,4 @@
-
+    <?php require_once('../templates/header.php')?>
     <div class="row w-75 m-auto">
         <form action="../controllers/add_user.php" class="mx-1 mx-md-4 card mt-3" method="POST">
                         <div class=" d-flex">

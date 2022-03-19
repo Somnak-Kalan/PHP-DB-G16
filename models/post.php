@@ -61,3 +61,12 @@ function updatePost($content,$id,$img)
         ':img' => $img,
     ]);
 }
+
+
+function get_current_date(){
+    global $database;
+    $statement=$database->prepare("SELECT post_date FROM posts ORDER BY post_date DESC");
+    $statement->execute();
+    return $statement->fetch();
+
+}

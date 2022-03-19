@@ -12,7 +12,7 @@ function add_user_info($full_name,$email,$phone,$location,$birth_date,$gender,$p
         ':location'=>$location,
         ':birth_date'=>$birth_date,
         ':gender'=>$gender,
-        ':password'=>$password,
+        ':password'=>$password
     ]);
 }
 function get_all_user_info(){

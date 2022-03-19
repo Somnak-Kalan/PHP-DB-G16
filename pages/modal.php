@@ -18,7 +18,7 @@
                     </div>
 
                     <!-- form for post any content  -->
-                    <form action="../controllers/add_post.php" method="post">
+                    <form action="../controllers/add_post.php" method="post" enctype="multipart/form-data">
                         <div>
                             <textarea name="content" class="form-control bg-dark border border-dark text-white" placeholder="What is your mind"></textarea>
 

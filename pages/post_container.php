@@ -5,7 +5,8 @@
 // function
 $posts = get_all_posts();
 $get_user_id = get_user_id();
-
+$get_current_date = get_current_date();
+// print_r($get_current_date);
 foreach ($posts as $post) {
 ?>
     <div styelay="">
@@ -18,7 +19,7 @@ foreach ($posts as $post) {
                         <div><img src="../images/lisa.png" alt="30" class="rounded-circle" width="100%" height="70vh"></div>
                         <div class="text-dark  fw-bold m-3">
                             <p> Lalalisa</p>
-                            <p><small>Sep 7 at 12:00 AM</small></p>
+                            <p><small><?= $get_current_date['post_date']; ?></small></p>
                         </div>
                     </div>
                     <!-- delete icon  -->
@@ -48,7 +49,7 @@ foreach ($posts as $post) {
                                 </ul>
                             </div>
                         </a>
-                        <li class="nav">comment</li>
+                        <li class="nav"><a class="nav-link fs-5 text-white fw-bold" href="../controllers/add_comment.php?user_id=<?php echo $get_user_id['user_id'] ?>">comment</a> </li>
                     </div>
                     <hr>
                     <hr>

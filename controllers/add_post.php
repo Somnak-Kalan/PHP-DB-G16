@@ -5,11 +5,11 @@ require_once "../models/post.php";
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
     $content=$_POST['content'];
-    $img=$_POST['img'];
-    $user_id=$_GET['user_id'];
-  
-    if(!empty($content) or $img or $user_id){
-        add_post($content,$img,$user_id);
+    $img=$_FILES['img']['name'];
+    $target='../images/'.$img;
+    move_uploaded_file($_FILES['img']['tmp_name'],$target);
+    if(!empty($content) or $img) {
+        add_post($content,$img);
         
     }
     header('Location:../index.php') ; 

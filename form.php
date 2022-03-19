@@ -1,5 +1,4 @@
 <?php
-require_once "templates/header.php";
     if(isset($_GET["forms"])){
         // get page file   
         $page = "form/".$_GET["forms"].".php";

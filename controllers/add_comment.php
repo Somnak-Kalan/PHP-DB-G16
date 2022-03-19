@@ -1,26 +1,11 @@
 <?php
-// ================================= require database from models folder =======================
-require_once "../models/database.php";
-// ================================= function to insert input into DB ==================================
-function add_comment($comment)
-{
-    global $database;
-    $statement = $database->prepare("INSERT INTO comments(comment_content)VALUES(:comment_content)");
-    $statement->execute(
-        [
-            ':comment_content' => $comment,
-
-        ]
-    );
-    // return $statement -> rowCount()>0;
-}
+require_once('../models/comment.php');
 // ================================== To check input NULL/NOT ==============================================
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $user_id = $_POST['user_id'];
     $comment = $_POST['comment'];
-
-
-    if (!empty($comment)) {
-        add_comment($comment);
+    if (!empty($comment) and !empty($user_id)) {
+        add_comment($comment,$user_id);
     }
     header('Location:../index.php');
 }
