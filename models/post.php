@@ -32,13 +32,14 @@ function getPostById($id){
     return $statement->fetch();
 }
 // update post when user want to change    
-function updatePost($content,$id)
+function updatePost($content,$id,$img)
 {
     global $database;
-    $statement=$database->prepare("UPDATE posts SET content=:content WHERE post_id=:id");
+    $statement=$database->prepare("UPDATE posts SET content=:content, img=:img WHERE post_id=:id");
     $statement->execute([
         ':content' => $content,
         ':id' => $id,
+        ':img' => $img,
     ]);
 }
 // table users 
@@ -55,13 +56,28 @@ function addUser($full_name,$email,$phone,$location,$birth_date,$gender,$passwor
         ':password'=>$password,
     ]);
 }
-function get_user() {
+function getUser(){
     global $database;
     $statement=$database->prepare("SELECT full_name,user_id FROM users WHERE user_id=4");
     $statement->execute();
     return $statement->fetch();
 }
-
-
-
+function getUserById($id){
+    global $database;
+    $statement=$database->prepare("SELECT * FROM users WHERE user_id=:id");
+    $statement->execute([
+        ':id'=>$id,
+    ]);
+    return $statement->fetch();
+}
+function updateProfile($full_name,$id,$profile_img,$cover_img){
+    global $database;
+    $statement=$database->prepare("UPDATE users SET full_name=:full_name,profile_img=:profile_img,cover_img=:cover_img WHERE user_id=:id");
+    $statement->execute([
+        ':full_name'=>$full_name,
+        ':id'=>$id,
+        ':profile_img'=>$profile_img,
+        ':cover_img'=>$cover_img,
+    ]);
+}
 // ----------------
