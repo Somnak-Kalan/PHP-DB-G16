@@ -22,7 +22,7 @@ function add_post($content,$img,$user_id)
 function get_all_posts()
 {
     global $database;
-    $statement=$database->prepare("SELECT * FROM posts ");
+    $statement=$database->prepare("SELECT * FROM posts ORDER BY post_id DESC");
     $statement->execute();
     return $statement-> fetchAll();
 }
