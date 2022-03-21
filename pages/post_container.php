@@ -49,7 +49,7 @@ foreach ($posts as $post) {
                 <div class="text-white fw-bold">
                     <p><?php echo $post['content'] ?></p>
                 </div>
-                <div class="text-center">
+                <div class="text-center"  >
                     <img src="../images/<?= $post['img'] ?>" class="card-img-top" alt="...">
                 </div>
                 <!-- =================================================== Like and comment number======================================= -->
