@@ -22,7 +22,7 @@ foreach ($posts as $post) {
                         <div><img src="../images/<?php echo $user_img['profile_img'] ?>" alt="" class="rounded-circle" width="90%" height="70vh"></div>
                         <div class="text-dark  fw-bold m-3">
                             <p> <?php echo $user_img['full_name'];  ?></p>
-                            <p><small>55</small></p>
+                            <p><small><?php echo $post['post_date'] ?></small></p>
                         </div>
                     </div>
                     <!-- delete icon  -->

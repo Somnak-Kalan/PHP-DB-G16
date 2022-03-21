@@ -15,19 +15,24 @@
       <div style="margin-left: 5em;" class="collapse navbar-collapse " id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link" href="?pages=home"><img class="w-50" src="../images/logo/home.png" alt=""></a>
+            <a class="nav-link" href="?pages=home"><img class="w-50" src="" alt=""><i class="fa-solid fa-house text-white display-6"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled"><img class="w-50" src="../images/logo/video.png" alt=""></a>
+            <a class="nav-link disabled"><img class="w-50" src="" alt=""></a>
           </li>
           <li class="nav-item">
-            <a href="?pages=comfirm_friend" class="nav-link "><img class="w-50" src="../images/logo/friend.png" alt=""></a>
+            <a href="?pages=comfirm_friend" class="nav-link "><img class="w-50" src="." alt=""><i class="fa-solid fa-user-group text-white display-6"></i></a>
           </li>
         </ul>
         <!-- logo left  -->
         <div style="margin-right:10em" class="">
           <ul class="d-flex nav">
-            <li><a href="?pages=account" class="logo rounded-5 p-2"><img class="w-50"  src="../images/logo/avatar.png" alt=""></a></li>
+            <li><a href="?pages=account" class="logo rounded-5 p-2"><img class="w-50"  src="." alt=""><i class="fa-solid fa-user-plus text-white display-6"></i></a></li>
+          </ul>
+        </div>
+        <div style="margin-right:10em" class="">
+          <ul class="d-flex nav">
+            <li><a href="../form/logout.php" class="logo rounded-5 p-2"><img class="w-50"  src="" alt=""><i class="fa-solid fa-arrow-right-from-bracket text-white display-6"></i></a></li>
           </ul>
         </div>
       </div>

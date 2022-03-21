@@ -36,14 +36,6 @@
                 <input type="password" id="form3Example4c" name="password" class="form-control" placeholder="password" />
             </div>
         </div>
-
-        <!-- <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                            <div class="form-outline flex-fill mb-0">
-                                <input type="password" id="form3Example4cd" class="form-control" placeholder="Repeat your password" />
-                            </div>
-                        </div> -->
-        <!-- more  -->
         <div class="more">
             <button style="margin-left:3em" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 MORE
@@ -74,15 +66,7 @@
                 I agree all statements in <a href="#!">Terms of service</a>
             </label>
         </div>
-        <?php
-        session_start();
-        if ($_SESSION['full_name'] == false  && $_SESSION['full_name'] == false && $_SESSION['password'] == false) {
         
-        ?>
-            <div class="alert text-danger text-center " role="alert">
-                Your email or name already exists !
-            </div>
-        <?php } ?>
         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
             <button type="submit" class="btn btn-primary btn-lg">Register</button>
         </div>
@@ -92,6 +76,5 @@
 </div>
 
 <?php
-
 require_once('../templates/header.php');
 ?>

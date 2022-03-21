@@ -28,7 +28,7 @@
                 <input type="password" name='password' id="form3Example4c" class="form-control" placeholder="password" />
             </div>
         </div>
-        <div class="form-check d-flex justify-content-center mb-5 ">
+        <div class="form-check d-flex justify-content-center mb-5">
             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
             <div class="d-flex justify-content-between">
                 <label class="form-check-label" for="form2Example3">
@@ -36,13 +36,7 @@
                 </label>
             </div>
         </div>
-        <?php if (($_SESSION['email'] == false) && ($_SESSION['password'] == false)) {
-
-        ?>
-            <div class="alert text-danger text-center " role="alert">
-                Your email or password is wrong!
-            </div>
-        <?php } ?>
+       
         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
             <button type="submit" class="btn btn-primary btn-lg">LOG IN</button>
         </div>

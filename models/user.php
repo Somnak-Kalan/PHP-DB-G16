@@ -2,6 +2,7 @@
 require_once('database.php');
 
 // table users 
+//@ return all for infomation to table user
 function add_user_info($full_name,$email,$phone,$location,$birth_date,$gender,$password){
     global $database;
     $statement = $database->prepare("INSERT INTO users(full_name,email,phone,location,birth_date,gender,password)VALUES(:full_name,:email,:phone,:location,:birth_date,:gender,:password)");
@@ -15,6 +16,8 @@ function add_user_info($full_name,$email,$phone,$location,$birth_date,$gender,$p
         ':password'=>$password
     ]);
 }
+//get all information from table user information
+//@return all information
 function get_all_user_info(){
     global $database;
     $statement=$database->prepare("SELECT * FROM users");
@@ -36,7 +39,7 @@ function get_user_name_from($id){
 }
 // update full_name,id profile_img,cover_img
 // @param $id (integer) the id of the user 
-// @return user name 
+// @return user_name and img
 function update_user_profile($full_name,$id,$profile_img,$cover_img){
     global $database;
     $statement=$database->prepare("UPDATE users SET full_name=:full_name,profile_img=:profile_img,cover_img=:cover_img WHERE user_id=:id");
@@ -63,8 +66,8 @@ function get_friend(){
     $statement->execute();
     return $statement->fetchAll();
 }
-// ----------------
-// ----------------
+// check it to for login user 
+// @return all information from table user to compare when user login
 function check_login_data($email,$password){
     global $database;
     $statement = $database->prepare("SELECT email,password FROM users WHERE email=:email and password=:password");

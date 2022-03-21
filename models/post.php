@@ -12,7 +12,6 @@ function add_post($content,$img)
             ':img'=>$img,
         ]
         );
-        // return $statement -> rowCount()>0;
 }
 
 
@@ -60,4 +59,12 @@ function updatePost($content,$id,$img)
         ':id' => $id,
         ':img' => $img,
     ]);
+}
+function get_current_date($post_id){
+    global $database;
+    $statement = $database->prepare("SELECT * FROM posts WHERE post_id=:post_id ");
+    $statement->execute([
+        ':post_id' => $post_id,
+    ]);
+    return $statement->fetch();
 }
