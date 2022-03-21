@@ -1,6 +1,6 @@
 <?php
 require_once('../models/user.php');
-$get_users = get_all_user_info();
+$get_users = get_all_user_info($id);
 $acount_exists = false;
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $full_name = $_POST['full_name'];

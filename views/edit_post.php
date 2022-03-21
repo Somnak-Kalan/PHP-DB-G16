@@ -15,7 +15,7 @@ $get_by_id = get_post_by_id($id);
         </div>
 
         <!-- form for post any content  -->
-        <form action="../controllers/edit_post_info.php" method="POST">
+        <form action="../controllers/edit_post_info.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $get_by_id['post_id'] ?>">
             <div>
                 <textarea name="content" class="form-control bg-dark border border-dark text-white" placeholder="What is your mind"><?= $get_by_id['content'] ?></textarea>
@@ -32,10 +32,11 @@ $get_by_id = get_post_by_id($id);
                             <label class="custom-file-label" for="inputGroupFile01">Add your post</label>
 
                             <label for="addImg">
-                                <input type="file" name="img" id="addImg" class="d-none ">
+                                <input type="file" value="<?php  echo $get_by_id['img']?>" name="img" id="addImg" class="d-none">
                                 <img src="../images/img.png" alt="40" width="30%">
                             </label>
-
+                            
+                            
                         </div>
                     </div>
                     <div>

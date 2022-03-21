@@ -8,14 +8,14 @@ $get_user_id= get_user_name_from($id);
 ?>
 <div style="background: rgb(192, 187, 187);" class=" container-fluid pt-4">
     <div class="w-75 m-auto ">
-        <form action="../controllers/edit_profile.php">
-                <input type="hidden" name="id" value="<?php $get_user_id['user_id'] ?>">
+        <form action="../controllers/edit_profile.php" METHOD="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?= $id ?>">
             <!-- -------cover img ---------------- -->
             <div class="custom-file d-flex justify-content-center text-center bg-light">
                 <label for="addImg">
                     COVER
                     <input type="file" name="cover_img" id="addImg" class="d-none ">
-                    <img  src="../images/<?php echo $get_user_id['cover_img'] ?>" alt="">
+                    <img src="../images/<?php echo $get_user_id['cover_img'] ?>" alt="">
                 </label>
     
             </div>
@@ -27,7 +27,7 @@ $get_user_id= get_user_name_from($id);
                             <label for="addProfile">
     
                                 <input type="file" name="profile" id="addProfile" class="d-none ">
-                                <img style="border-radius:40px;" width="100%" height="80vh" src="../images/<?php echo $get_user_id['profile_img'] ?>" alt="">
+                                <img style="border-radius:40px;" width="100%" height="80vh" src="../images/" alt="">
                             </label>
                         </div>
                         <div class="m-3">

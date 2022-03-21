@@ -19,11 +19,12 @@ function add_comment($comment,$post_id,$user_id)
 
 // ================================== To check input NULL/NOT ==============================================
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user_id = $_POST['user_id'];
     $comment = $_POST['comment'];
     $id =$_GET['id'];
     $user_id=$_GET['user_id'];
-
+    echo $id;
+    echo $user_id;
+    echo $comment;
     if (($comment and $id  and $user_id )!==null) {
         add_comment($comment,$id,$user_id);
     }

@@ -5,4 +5,4 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];
     deletePost($id);
 }
-header('Location:../index.php');
+header('Location:../index.php/home.php');

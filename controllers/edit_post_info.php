@@ -1,13 +1,18 @@
-<?php
+
+<?php 
 require_once('../models/post.php');
     $content =$_POST['content'];
     $id =$_POST['id'];
-    $img = $_POST['img'];
+    $img=$_FILES['img']['name'];
+    // $user_id=$_GET['user_id'];
+    $target='../images/'.$img;
+    move_uploaded_file($_FILES['img']['tmp_name'],$target);
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        if(!empty($content) or !empty($id) or $img){
+        if($content || $id || $img){
             updatePost($content,$id,$img);
+
         }
-        // header('Location:../index.php') ;
+        header('Location:../index.php') ;
     }
-    // header('Location:../index.php');
+
 ?>

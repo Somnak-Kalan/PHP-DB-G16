@@ -2,15 +2,14 @@
 require_once('database.php');
 // Get all posts to table posts
 // @return all posts 
-function add_post($content,$img,$user_id)
+function add_post($content,$img)
 {
     global $database;
-    $statement=$database->prepare("INSERT INTO posts(content,img,user_id)VALUES(:content,:img,:user_id)");
+    $statement=$database->prepare("INSERT INTO posts(content,img)VALUES(:content,:img)");
     $statement->execute(
         [
             ':content'=>$content,
             ':img'=>$img,
-            'user_id'=>$user_id,
         ]
         );
         // return $statement -> rowCount()>0;
@@ -38,7 +37,7 @@ function deletePost($id){
     ]);
     header('Location:../pages/home.php');
 }
-
+    
 
 // Get the post from the id
 // @param $id (integer) the id of the post 
@@ -52,22 +51,13 @@ function get_post_by_id($id){
     return $statement->fetch();
 }
 // update post when user want to change    
-function updatePost($content,$img,$id,)
+function updatePost($content,$id,$img)
 {
     global $database;
     $statement=$database->prepare("UPDATE posts SET content=:content, img=:img WHERE post_id=:id");
     $statement->execute([
         ':content' => $content,
-        ':img' => $img,
         ':id' => $id,
+        ':img' => $img,
     ]);
-}
-
-
-function get_current_date(){
-    global $database;
-    $statement=$database->prepare("SELECT post_date FROM posts ORDER BY post_date DESC");
-    $statement->execute();
-    return $statement->fetch();
-
 }
