@@ -7,8 +7,7 @@
 $posts = get_all_posts();
 $get_user_id = get_user_id();
 $get_user_name = get_user_name_img();
-foreach($get_user_name as $user_img){
-   
+foreach ($get_user_name as $user_img) {
 };
 foreach ($posts as $post) {
 ?>
@@ -26,9 +25,26 @@ foreach ($posts as $post) {
                         </div>
                     </div>
                     <!-- delete icon  -->
-                    <p class="card-text text-end d-flex">
-                        <a class="nav-link text-black fw-bold" href="../views/edit_post.php?id=<?php echo $post['post_id'] ?>">EDIT</a>
-                        <a class="nav-link text-black fw-bold" href="controllers/delete_post.php?id=<?php echo $post['post_id'] ?>">DELETE</a>
+
+                    <!-- ------------------------- -->
+
+                    <div style="margin-left:14em;" class="modal fade " id="example<?php echo $post["post_id"] ?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered ">
+                            <div class="modal-content w-50">
+                                <div class="modal-body ">
+                                    <p class="card-text ">
+                                        <a class="nav-link text-black fw-bold" href="../views/edit_post.php?id=<?php echo $post['post_id'] ?>"><i style="font-size:30px" class="fa-solid fa-pen-to-square text-primary "></i> EDIT</a>
+                                        <hr>
+                                        <a class="nav-link text-black fw-bold" href="controllers/delete_post.php?id=<?php echo $post['post_id'] ?>"><i style="font-size:30px" class="fa-regular fa-trash-can text-danger "></i> DELETE</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="nav-link text-dark fs-5" data-bs-toggle="modal" href="#example<?php echo $post["post_id"] ?>" role="button">ooo</a>
+
+                    <!-- ---------------------------------------------------------------- -->
+
                 </div>
                 <div class="text-white fw-bold">
                     <p><?php echo $post['content'] ?></p>
@@ -109,11 +125,11 @@ foreach ($posts as $post) {
                                             <p style="display:flex;justify-content:space-between " class="p-1 rounded"><?php echo $content['comment_content'] ?> </p>
                                             <div>
                                                 <a class="btn text-primary border-0" data-bs-toggle="collapse" href="#collapse<?php echo $content['comment_id'] ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                <i class="fa-solid fa-pen-to-square"></i>
-                                                    </a>
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                </a>
                                                 <button style="background:#C4C1C1;" class="border-0 text-danger  fw-bold" type="submit"><i class="fa-solid fa-trash-can"></i></button>
 
-                                            </div>                                         
+                                            </div>
                                         </div>
                                     </form>
                                     <div class="collapse" id="collapse<?php echo $content['comment_id'] ?>">
@@ -121,8 +137,8 @@ foreach ($posts as $post) {
                                             <strong>
                                                 <form action="controllers/edit_comment.php" method="post">
                                                     <input type="hidden" name="id" value="<?php echo $content['comment_id'] ?>" />
-                                                    <input class="form-control" name="comment_content" value="<?php echo $content['comment_content'] ?>"> 
-                                                    <button style="background:white;"  class="text-danger border-0 mt-2"   type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                                    <input class="form-control" name="comment_content" value="<?php echo $content['comment_content'] ?>">
+                                                    <button style="background:white;" class="text-danger border-0 mt-2" type="submit"><i class="fa-solid fa-pen-to-square"></i></button>
 
                                                 </form>
                                             </strong>
@@ -136,5 +152,3 @@ foreach ($posts as $post) {
             </div>
         </div>
     <?php } ?>
-
-   
