@@ -66,3 +66,16 @@ function get_friend(){
     return $statement->fetchAll();
 }
 // ----------------
+// ----------------
+function check_login_data($email,$password){
+    global $database;
+    $statement = $database->prepare("SELECT email,password FROM users WHERE email=:email and password=:password");
+    $statement->execute(
+        [
+            ':email'=>$email,
+            ':password'=>$password,
+        ]
+    );
+    return $statement->fetchAll();
+    
+}

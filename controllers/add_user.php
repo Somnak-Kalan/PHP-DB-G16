@@ -12,19 +12,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     foreach ($get_users as $user) {
         // echo $id['user_id'];
-        // session_start();
-        if (!empty($full_name) && !empty($email) && !empty($password) || $birth_day || $location || $birth_day || $gender) {
-            if ($full_name == $user['full_name'] and $email == $user['email'] and $password == $user['password']) {
-                $acount_exists = true;
-            }
-            header('location:../index.php');
-        } else {
-            header('location:../form.php');
-        };
-    }
-}
-if ($acount_exists == false) {
+        session_start();
+        if (!empty($full_name) && !empty($email) && !empty($password) && !empty($birth_day) && !empty($phone) && !empty($gender)) {
+            $full_name == $user['full_name'];
+            $email == $user['email'];
+            $password == $user['password'];
+            $birth_day == $user['birth_date'] and $gender == $user['gender'];
+            $phone == $user['phone'];
+            $acount_exists = true;
+          
+        }
+    };    
+};
+if ($acount_exists !== false) {
     add_user_info($full_name, $email, $phone, $location, $birth_day, $gender, $password);
+    header('location:../index.php');
 } else {
-    header('location:../form/signup.php');
+    header('location:../form.php');
 }
+
