@@ -6,9 +6,10 @@
 // function
 $posts = get_all_posts();
 $get_user_id = get_user_id();
-// $get_current_date = get_current_date();
-// print_r($get_current_date);
-// $comments = get_comment_by();
+$get_user_name = get_user_name_img();
+foreach($get_user_name as $user_img){
+   
+};
 foreach ($posts as $post) {
 ?>
     <div styelay="">
@@ -18,9 +19,9 @@ foreach ($posts as $post) {
                 <div class="card-body d-flex justify-content-between">
 
                     <div class=" d-flex ">
-                        <div><img src="../images/lisa.png" alt="30" class="rounded-circle" width="100%" height="70vh"></div>
+                        <div><img src="../images/<?php echo $user_img['profile_img'] ?>" alt="" class="rounded-circle" width="90%" height="70vh"></div>
                         <div class="text-dark  fw-bold m-3">
-                            <p> Lalalisa</p>
+                            <p> <?php echo $user_img['full_name'];  ?></p>
                             <p><small>55</small></p>
                         </div>
                     </div>

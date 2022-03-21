@@ -77,3 +77,12 @@ function check_login_data($email,$password){
     return $statement->fetchAll();
     
 }
+
+// Get select name and images
+// @return all user
+function get_user_name_img(){
+    global $database;
+    $statement=$database->prepare("SELECT *FROM users  ");
+    $statement->execute();
+    return $statement->fetchAll();
+}

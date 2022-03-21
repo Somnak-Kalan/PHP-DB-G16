@@ -3,7 +3,13 @@
 require_once('models/user.php');
 $get_user_id = get_user_id();
 ?>
+<?php
+$get_profile_img = get_user_name_img();
+foreach ($get_profile_img as $profile_img){
 
+}
+
+?>
 
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -15,12 +21,12 @@ $get_user_id = get_user_id();
             <div class="modal-body bg-dark text-white">
                 <div>
                     <div class="d-flex">
-                        <p style="background:grey;border-radius: 40px;padding:25px;"></p>
-                        <p>Somnak Kalan</p>
+                        <img style="border-radius: 40px;height:15vh;" src="../images/<?php echo $profile_img['profile_img'] ?>" alt="" width="10%">
+                        <p class="m-2"><?php echo $profile_img['full_name'] ?></p>
                     </div>
 
                     <!-- form for post any content  -->
-                    <form action="controllers/add_post.php?user_id=<?php echo $get_user_id['user_id'] ?>" method="post" enctype="multipart/form-data">
+                    <form class="mt-2" action="controllers/add_post.php?user_id=<?php echo $get_user_id['user_id'] ?>" method="post" enctype="multipart/form-data">
                         <div>
                             
                             <textarea name="content" class="form-control bg-dark border border-dark text-white" placeholder="What is your mind"></textarea>
