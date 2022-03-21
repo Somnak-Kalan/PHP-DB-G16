@@ -1,11 +1,17 @@
 
-<?php  session_start();
+
+
+
+
+<?php  
+require_once('../templates/header.php');
+
 ?>
     <div class="row w-75 m-auto">
         <form action="../controllers/add_user.php" class="mx-1 mx-md-4 card mt-3" method="POST">
                         <div class=" d-flex">
-                            <a href="?forms=login" class="nav-link  text-white btn-primary m-2 form-control text-center">LOGIN</a> 
-                            <a  class="nav-link text-white active btn-primary m-2 form-control text-center border-3 border-danger ">REGISTER</a> 
+                            <a href="../index.php" class="nav-link  text-white btn-primary m-2 form-control text-center">LOGIN</a> 
+                            <a href=""  class="nav-link text-white active btn-primary m-2 form-control text-center border-3 border-danger ">REGISTER</a> 
                         </div>
                         <p class="text-center fw-bold">Sign up</p>
                         <div class="text-center">
@@ -85,6 +91,9 @@
                         
     
                   </form>
-      </div>
+                </div>
   
-     
+     <?php
+
+     require_once('../templates/header.php');
+     ?>

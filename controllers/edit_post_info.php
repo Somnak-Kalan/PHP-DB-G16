@@ -12,7 +12,7 @@ require_once('../models/post.php');
             updatePost($content,$id,$img);
 
         }
-        header('Location:../index.php') ;
+        header('Location:../home_view.php') ;
     }
 
 ?>

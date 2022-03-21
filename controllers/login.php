@@ -11,13 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         foreach ($check_login_data as $value) {
             if ($email == $value['email'] && $password == $value['password']){
-                header("location:../index.php");
+                header("location:../home_view.php");
                 $check_in=true;
             }else{
                 echo"Wrong user name or password!";
             }
         }
     }if($validatation !=true or $check_in !=true){
-        header("location:../form.php");
+        header("location:../index.php");
     }
 }

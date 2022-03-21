@@ -13,5 +13,5 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         add_post($content,$img,$user_id);
         
     };
-    header('Location:../index.php') ; 
+    header('Location:../home_view.php') ; 
 }

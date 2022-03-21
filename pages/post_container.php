@@ -70,7 +70,7 @@ foreach ($posts as $post) {
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between m-0 p-0">
-                        <a class="nav-link text-dark" href="controllers/add_like.php?id=<?= $post['post_id'] ?>&user_id=<?php echo $get_user_id['user_id'] ?>"><i class="fa-solid fa-thumbs-up m-1"></i> Like</a>
+                        <a class="nav-link text-dark" href="../controllers/add_like.php?id=<?= $post['post_id'] ?>&user_id=<?php echo $get_user_id['user_id'] ?>"><i class="fa-solid fa-thumbs-up m-1"></i> Like</a>
                         <a class=" text-dark nav-link fw-bold" data-bs-toggle="collapse" href="#collapse<?php echo $post['post_id'] ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <i class="fa-solid fa-message"></i> comments
                         </a>
@@ -85,7 +85,7 @@ foreach ($posts as $post) {
                         <div class="logo d-flex">
                             <p style="background:grey;border-radius: 40px;padding:25px;"></p>
 
-                            <form action="controllers/add_comment.php?id=<?= $post['post_id'] ?>&user_id=<?php echo $get_user_id['user_id'] ?>" method="post" class="form-control border-0" style="background: rgb(192, 187, 187);">
+                            <form action="../controllers/add_comment.php?id=<?= $post['post_id'] ?>&user_id=<?php echo $get_user_id['user_id'] ?>" method="post" class="form-control border-0" style="background: rgb(192, 187, 187);">
                                 <!-- ======================================== add comment ============================================= -->
                                 <div class="input-group mb-3">
                                     <input type="text" name="comment" id="comment_btn" class="form-control  " placeholder="Write comment..." aria-label="Write comment..." aria-describedby="basic-addon2">

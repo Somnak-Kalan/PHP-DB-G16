@@ -28,6 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (($comment and $id  and $user_id )!==null) {
         add_comment($comment,$id,$user_id);
     }
-    header('Location:../index.php');
+    header('Location:../home_view.php');
 }
 

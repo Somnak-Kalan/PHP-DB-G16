@@ -1,10 +1,12 @@
 
 <?php require_once('models/user.php')?>
 <?php 
-    $value=get_all_user_info(80);
-    
+    $get_value=get_all_user_info();
+    foreach ($get_value as $value){
+
+    }
 ?>
-<form action="">
+<form action="../controllers/add_user.php" method="post">
     <input type="hidden" name='id' value="<?php echo $value['user_id']; ?>" />
     <div style="background: rgb(192, 187, 187);" class=" container-fluid pt-4">
         <div class="w-75 m-auto ">

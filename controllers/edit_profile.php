@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     move_uploaded_file($_FILES['profile']['tmp_name'],$target);
         if(!empty($full_name)){
             update_user_profile($full_name,$id,$profile_img,$cover_img);
-            header("location:../index.php/account.php");
+            header("location:../home_view.php");
             
         };
         // header("location:../index.php/account.php");

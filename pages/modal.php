@@ -20,9 +20,9 @@ $get_user_id = get_user_id();
                     </div>
 
                     <!-- form for post any content  -->
-                    <form action="../controllers/add_post.php?user_id=<?php echo $get_user_id['user_id'] ?>" method="post" enctype="multipart/form-data">
+                    <form action="controllers/add_post.php?user_id=<?php echo $get_user_id['user_id'] ?>" method="post" enctype="multipart/form-data">
                         <div>
-                            <?=$get_user_id['user_id']?>
+                            
                             <textarea name="content" class="form-control bg-dark border border-dark text-white" placeholder="What is your mind"></textarea>
 
                             <label for="colorInput" class="m-3">

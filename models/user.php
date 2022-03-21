@@ -15,13 +15,11 @@ function add_user_info($full_name,$email,$phone,$location,$birth_date,$gender,$p
         ':password'=>$password
     ]);
 }
-function get_all_user_info($id){
+function get_all_user_info(){
     global $database;
-    $statement=$database->prepare("SELECT * FROM users WHERE user_id=:id");
-    $statement->execute([
-        ':id'=>$id,
-    ]);
-    return $statement->fetch();
+    $statement=$database->prepare("SELECT * FROM users");
+    $statement->execute();
+    return $statement->fetchAll();
 }
 
 

@@ -7,6 +7,6 @@
      if($comment_content || $id ){
         update_comment($comment_content, $comment_id);
       }
-     header('Location:../index.php') ;
+     header('Location:../home_view.php') ;
  }
 ?>

@@ -1,9 +1,9 @@
 
     <div class="row w-75 m-auto " >
-        <form action="../controllers/login.php" method="post" class="mx-1 mx-md-4 card mt-3">
+        <form action="controllers/login.php" method="post" class="mx-1 mx-md-4 card mt-3">
                         <div class=" d-flex">
-                            <a href="" class="nav-link active text-white btn-primary m-2 form-control text-center border-3 border-danger">LOGIN</a> 
-                            <a href="?forms=signup" class="nav-link text-white btn-primary m-2 form-control text-center ">REGISTER</a> 
+                            <a  class="nav-link active text-white btn-primary m-2 form-control text-center border-3 border-danger">LOGIN</a> 
+                            <a href="form/signup.php" class="nav-link text-white btn-primary m-2 form-control text-center ">REGISTER</a> 
                         </div>
     
                         <p class="text-center fw-bold">Login</p>

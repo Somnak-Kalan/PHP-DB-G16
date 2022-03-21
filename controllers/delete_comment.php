@@ -7,4 +7,4 @@ if(isset($_POST['id'])){
     echo $id;
     delete_comment($id);
 }
-header('Location:../index.php');
+header('Location:../home_view.php');

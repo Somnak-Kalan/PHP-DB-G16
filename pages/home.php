@@ -1,6 +1,6 @@
 
 <?php
-    require_once("modal.php");
+    // require_once("modal.php");
 ?>
 <div>
     <?php require_once("side_left.php") ?>
