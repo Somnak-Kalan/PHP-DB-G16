@@ -2,7 +2,7 @@
   require_once('header.php');
 ?>
 
-<nav style="z-index:1;" class="navbar navbar-expand-lg navbar-light bg-primary m-0 p-0 position-sticky top-0">
+<nav style="z-index:1;" class="navbar navbar-expand-lg navbar-light bg-primary shadow-lg    m-0 p-0 position-sticky top-0">
   <div class="container-fluid">
     <a class="navbar" href="?pages=face"><img class="text-white w-75"  src="../images/logo/facebook.png" alt=""></a>
     <form class="d-flex">
