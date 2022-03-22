@@ -21,7 +21,7 @@
             <a class="nav-link disabled"><img class="w-50" src="" alt=""></a>
           </li>
           <li class="nav-item">
-            <a href="?pages=comfirm_friend" class="nav-link "><img class="w-50" src="." alt=""><i class="fa-solid fa-user-group text-white display-6"></i></a>
+            <a href="?pages=friend" class="nav-link "><img class="w-50" src="." alt=""><i class="fa-solid fa-user-group text-white display-6"></i></a>
           </li>
         </ul>
         <!-- logo left  -->

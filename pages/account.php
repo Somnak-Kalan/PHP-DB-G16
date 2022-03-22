@@ -43,8 +43,8 @@
                 ?>
                 <div class="" style="border-top:5px solid white;">
                     <ul class="nav ">
-                        <li class="nav-item"><a class="nav-link text-white" href="?pages=post">Post</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="">Post</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="?pages=photo">Photos</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="">Friends</a></li>
                     </ul>
                 </div>
@@ -56,7 +56,7 @@
     <div class="row">
         <div class="col-md-3">
             <?php
-            require_once('account_left.php');
+            require_once('photo.php');
             ?>
         </div>
         <div class="col-md-9 mt-2" >
