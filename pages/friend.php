@@ -18,14 +18,3 @@ foreach($get_all_friend_out as $friend):
     </div>
 </form>
 <?php endforeach ?>
-<div id="myDIV">
-This is my DIV element.
-</div>
-
-<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
-
-<script>
-function myFunction() {
-  document.getElementById("myDIV").style.display = "none";
-}
-</script>
