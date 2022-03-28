@@ -17,9 +17,6 @@
             <div class="form-outline flex-fill mb-0">
                 <input type="email" name='email' id="form3Example3c" class="form-control" placeholder="email" />
             </div>
-            <?php
-            session_start();
-            ?>
         </div>
 
         <div class="d-flex flex-row align-items-center mb-4">
