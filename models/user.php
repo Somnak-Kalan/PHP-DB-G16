@@ -20,7 +20,7 @@ function add_user_info($full_name,$email,$phone,$location,$birth_date,$gender,$p
 //@return all information
 function get_all_user_info(){
     global $database;
-    $statement=$database->prepare("SELECT * FROM users ");
+    $statement=$database->prepare("SELECT * FROM users");
     $statement->execute();
     return $statement->fetchAll();
 }
@@ -86,13 +86,6 @@ function check_login_data($email,$password){
 function get_user_name_img(){
     global $database;
     $statement=$database->prepare("SELECT *FROM users  ");
-    $statement->execute();
-    return $statement->fetchAll();
-}
-
-function check_signup(){
-    global $database;
-    $statement=$database->prepare("SELECT full_name,email,password FROM users");
     $statement->execute();
     return $statement->fetchAll();
 }

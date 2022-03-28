@@ -50,7 +50,6 @@ function get_post_by_id($id){
     return $statement->fetch();
 }
 // update post when user want to change    
-// @return all user  information back to table posts
 function updatePost($content,$id,$img)
 {
     global $database;
@@ -61,8 +60,6 @@ function updatePost($content,$id,$img)
         ':img' => $img,
     ]);
 }
-// get current post of date
-// @return all to post 
 function get_current_date($post_id){
     global $database;
     $statement = $database->prepare("SELECT * FROM posts WHERE post_id=:post_id ");

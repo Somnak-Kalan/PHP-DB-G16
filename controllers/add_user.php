@@ -1,41 +1,35 @@
 <?php
 require_once('../models/user.php');
-if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
-	// Could not get the data that should have been sent.
-	exit('Please complete the registration form!');
-}
-// Make sure the submitted registration values are not empty.
-if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
-	// One or more values are empty.
-	exit('Please complete the registration form');
-}
-// We need to check if the account with that username exists.
-if ($stmt = $database->prepare('SELECT id, password FROM users WHERE username = ?')) {
-	// Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
-	$stmt->bind_param('s', $_POST['username']);
-	$stmt->execute();
-	$stmt->store_result();
-	// Store the result so we can check if the account exists in the database.
-	if ($stmt->num_rows > 0) {
-		// Username already exists
-		echo 'Username exists, please choose another!';
-	} else {
-		// Insert new account
-	}
-	$stmt->close();
-} else {
-	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
-	echo 'Could not prepare statement!';
-}
-$con->close();
-// Username doesnt exists, insert new account
-if ($stmt = $database->prepare('INSERT INTO users (full_name, email, password) VALUES (?, ?, ?)')) {
-	// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
-	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
-	$stmt->execute();
-	echo 'You have successfully registered, you can now login!';
-} else {
-	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
-	echo 'Could not prepare statement!';
-}
+$get_users = get_all_user_info();
+
+$acount_exists = false;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $full_name = $_POST['full_name'];
+    $email = $_POST['email'];
+    $phone = $_POST['number'];
+    $location = $_POST['location'];
+    $birth_day = $_POST['date'];
+    $gender = $_POST['gender'];
+    $password = $_POST['password'];
+    $_SESSION['full_name'] = false;
+    $_SESSION['email'] = false;
+    $_SESSION['password'] = false;
+    session_start();
+    foreach ($get_users as $user) {
+        if ($full_name == $user['full_name'] && $password == $user['password'] && $email == $user['email']) {
+            echo "Please";
+            $acount_exists = true;
+            $_SESSION['full_name'] = false;
+            $_SESSION['email'] = false;
+            $_SESSION['password'] = false;
+            header("Location:../form/signup.php");
+        }
+        
+    };
+    if ($acount_exists !== true) {
+        if (!empty($full_name) && !empty($email) && !empty($password)) {
+            add_user_info($full_name, $email, $phone, $location, $birth_day, $gender, $password);
+        }
+        header("Location:../home_view.php");
+    }
+};

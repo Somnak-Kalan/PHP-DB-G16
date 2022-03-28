@@ -5,6 +5,5 @@
     if($usr_id){
         get_add_friend($usr_id);
     }
-    header('Location:../pages/friend.php');
-}
+ }
 ?>
